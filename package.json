@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/harkaransingh08/backend#readme",
+  "bugs": {
+    "url": "https://github.com/harkaransingh08/backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harkaransingh08/backend.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "Index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "npx nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
