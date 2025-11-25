@@ -1,17 +1,12 @@
-import express from 'express';
-import mongoose from 'mongoose';
+import express from 'express'
+import route from './Routes/Routes.js'
+const app = express()
 
-const app = express();
-const PORT = 8888;
-const MONGO_URL = "mongodb+srv://harkaransingh08ktl_db_user:d8Gw70pKOL5o1MAQ@cluster0.dt2em9l.mongodb.net/"
+const PORT = 8080
 
-mongoose.connect(MONGO_URL)
-.then(() => {
-    console.log("Connected to MongoDB");
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
-})
-.catch((error) => {
-    console.error("Error connecting to MongoDB:", error);
-});
+const a = (req, res) => { res.send({ name: "fdsfs", age: 44 }) }
+
+app.use('/', route)
+
+
+app.listen(PORT, () => console.log('Server is Running Port = ', PORT))
